@@ -3,7 +3,7 @@ using namespace std;
 
 int twoSum(vector<int> &a, int target) {
     int ans = 0;
-    unordered_map<int, int> cnt = {{0, 1}};
+    unordered_map<int, int> cnt;
     for (int x : a) {
         ans += cnt[target - x];
         cnt[x]++;

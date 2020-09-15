@@ -1,7 +1,7 @@
 n, target = map(int, input().split())
 a = map(int, input().split())
 
-S = set([0])
+S = set()
 ans = 0
 for x in a:
     if target - x in S:
