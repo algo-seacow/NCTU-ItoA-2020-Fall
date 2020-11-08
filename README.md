@@ -10,3 +10,4 @@
 - [1117 . Assignment 8 - Distinct Points](1117)
 - [1118 . Assignment 9 - Circular Sums](1118)
 - [1119 . Assignment 10 - Sum of Four](1119)
+- [1120 . Assignment 11 - Longest Palindromic Subsequence](1120)
