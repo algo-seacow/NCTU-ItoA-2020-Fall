@@ -1,14 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-template<typename value_type>
 class hash_table{
 	public:
-		void add(const int& key, const value_type& value){
+		void add(const int& key, const tuple<int, int, int>& value){
 			int index = hash(key);
+			for(auto &it : table[index]){
+				if(::get<0>(it) == key){
+					if(value < it) it = value;
+					return;
+				}
+			}
 			table[index].push_back(value);
 		}
-		list<value_type> get(const int& key){
+		list<tuple<int, int, int>> get(const int& key){
 			int index = hash(key);
 			return table[index];
 		}
@@ -17,17 +22,16 @@ class hash_table{
 		}
 	private:
 		static const int table_size = 1000041;
-		list<value_type> table[table_size];
+		list<tuple<int, int, int>> table[table_size];
 };
 
-hash_table<tuple<int, int, int>> mp;
+hash_table mp;
 
 vector<int> solve(const vector<int> &v, int s){
 	
 	tuple<int, int, int, int> ans{v.size(), v.size(), v.size(), v.size()};
 
 	for(int i = 0; i < v.size(); i++){
-
 		for(int j = 0; j < i; j++)
 			mp.add(v[i] + v[j], make_tuple(v[i] + v[j], j, i));
 
