@@ -21,7 +21,7 @@ class hash_table{
 			return ((key % table_size) + table_size) % table_size;
 		}
 	private:
-		static const int table_size = 1000041;
+		static const int table_size = 500041;
 		list<tuple<int, int, int>> table[table_size];
 };
 
