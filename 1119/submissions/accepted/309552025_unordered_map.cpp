@@ -2,24 +2,30 @@
 using namespace std;
 
 vector<int> solve(const vector<int> &v, int s){
-	unordered_multimap<int, pair<int, int>> mp; // key: sum of two numbers, value: key of two numbers
+	unordered_map<int, pair<int, int>> mp; // key: sum of two numbers, value: key of two numbers
 	tuple<int, int, int, int> ans{v.size(), v.size(), v.size(), v.size()};
 	for(int i = 0; i < v.size(); i++){
 		
-		for(int j = 0; j < i; j++)
-			mp.insert({v[i] + v[j], {j, i}});
+		for(int j = 0; j < i; j++){
+
+			pair<int, int> temp = make_pair(j, i);
+
+			if(mp.find(v[i] + v[j]) == mp.end())
+				mp.insert({v[i] + v[j], temp});
+			else if(temp < mp[v[i] + v[j]])
+				mp[v[i] + v[j]] = temp;
+		}
 
 		for(int j = i + 1; j < v.size(); j++){
 
 			if(mp.find(s - v[i] - v[j]) == mp.end()) continue;
 
-			auto its = mp.equal_range(s - v[i] - v[j]);
+			pair<int, int> pr = mp[s - v[i] - v[j]];
 
-			for(auto it = its.first; it != its.second; it++){
-				if(i == it->second.first || i == it->second.second || j == it->second.first || j == it->second.second) continue;
-				tuple<int, int, int, int> temp{it->second.first, it->second.second, i, j};
-				if(temp < ans) ans = temp;
-			}
+			if(i == pr.first || i == pr.second || j == pr.first || j == pr.second) continue;
+			tuple<int, int, int, int> temp{pr.first, pr.second, i, j};
+			if(temp < ans) ans = temp;
+
 		}
 	}
 	if(get<0>(ans) != v.size()) return vector<int>{get<0>(ans), get<1>(ans), get<2>(ans), get<3>(ans)};
