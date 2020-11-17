@@ -11,6 +11,8 @@
 - [1118 . Assignment 9 - Circular Sums](1118)
 - [1119 . Assignment 10 - Sum of Four](1119)
 - [1120 . Assignment 11 - Longest Palindromic Subsequence](1120)
+- [1121 . Assignment 12 - Shortest Interval Cover](1121)
+- [1122 . Assignment 13 - Knapsack with Volumes](1122)
 - [1123 . Quiz 1.1 - Exponential Lambert W Function](1123)
 - [1124 . Quiz 1.2 - Range Maximum Query](1124)
 - [1125 . Quiz 1.3 - Longest Common Subsequence](1125)
