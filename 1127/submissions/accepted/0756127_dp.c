@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int n, m, k, l, a, i, d[200001];
+int n, m, k, l, a, i, d[100001];
 
 int main() {
   scanf("%d%d%d", &n, &m, &k);
@@ -9,18 +10,18 @@ int main() {
     printf("%d", k - m);
     return 0;
   }
-  l = 2 * m - k - 1;
-  d[k] = 1;
+  for (; i <= m; ++i)
+    d[i] = abs(i - k);
   for (; n; --n) {
     scanf("%d", &a);
     a *= n;
-    for (i = l; i >= k + a; --i)
-      d[i] |= d[i - a];
+    for (i = m; i >= a; --i)
+      if (d[i] > d[i - a])
+        d[i] = d[i - a];
+    for (; i > k + a / 2; --i)
+      if (d[i] > k - i + a)
+        d[i] = k - i + a;
   }
-  for (i = 0; i <= m - k; ++i)
-    if (d[m - i] || d[m + i]) {
-      printf("%d", i);
-      break;
-    }
+  printf("%d", d[m]);
   return 0;
 }
