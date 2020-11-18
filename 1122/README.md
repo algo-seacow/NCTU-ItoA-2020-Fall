@@ -8,4 +8,5 @@
       - 放不下第 `i` 個物品
     - `max(dp[i - 1][j][k], dp[i - 1][j - w[i]][k - v[i]] + p[i])` if `i >= 0 && j >= w[i] && k >= v[i]`
       - 放不放第 `i` 個物品都試過
+  - 最後答案在 `dp[n - 1][W][V]`。
 - [0756127_knapsack.c](submissions/accepted/0756127_knapsack.c)
