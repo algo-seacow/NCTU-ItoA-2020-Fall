@@ -10,3 +10,8 @@
       - 當前字元不同
   - 最後答案是 `dp[n - 1][n - 1]`
 - [0756127_lcs.c](submissions/accepted/0756127_lcs.c)
+
+- 同上
+  - `dp` 陣列改用 1-based
+  - 最後答案是 `dp[n][n]`
+- [309552025_lcs.cpp](submissions/accepted/309552025_lcs.cpp)

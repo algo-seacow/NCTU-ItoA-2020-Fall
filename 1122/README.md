@@ -10,3 +10,10 @@
       - 放不放第 `i` 個物品都試過
   - 最後答案在 `dp[n - 1][W][V]`。
 - [0756127_knapsack.c](submissions/accepted/0756127_knapsack.c)
+- [309552025_knapsack.cpp](submissions/accepted/309552025_knapsack.cpp)
+
+- 和前一個做法類似，但可以觀察到 `dp[i - 2][*][*]` 以前是不會在用到的。
+  - 只留下 `dp[i][*][*]` 和 `dp[i - 1][*][*]`。
+    - 實作上只用 `dp[0][*][*]` 和 `dp[1][*][*]` 兩個交替使用。
+  - 最後答案在 `dp[((n - 1) & 1)][W][V]`。
+- [309552025_knapsack_rolling_array.cpp](submissions/accepted/309552025_knapsack_rolling_array.cpp)

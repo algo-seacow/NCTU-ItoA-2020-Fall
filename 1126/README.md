@@ -4,3 +4,4 @@
 如果兩個空間都放得下，選擇比較晚結束的空間。
 
 - [0756127_greedy.c](submissions/accepted/0756127_greedy.c)
+- [309552025_greedy.cpp](submissions/accepted/309552025_greedy.cpp)

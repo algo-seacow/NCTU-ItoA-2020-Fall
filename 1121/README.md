@@ -4,3 +4,4 @@
 將 n 個點排序並且用 binary search 猜 m。
 
 - [0756127_binary_search_greedy.c](submissions/accepted/0756127_binary_search_greedy.c)
+- [309552025_binary_search_greedy.cpp](submissions/accepted/309552025_binary_search_greedy.cpp)
