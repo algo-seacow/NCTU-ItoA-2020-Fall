@@ -19,3 +19,5 @@
 - [1126 . Quiz 1.4 - Activity Selection with Two Spaces](1126)
 - [1127 . Quiz 1.5 - Productivity Programming](1127)
 - [1128 . Assignment 14 - Last Larger Integers](1128)
+- [1129 . Assignment 15 - Split Connected Components](1129)
+- [1130 . Assignment 16 - Shortest Manhattan Walk](1130)
