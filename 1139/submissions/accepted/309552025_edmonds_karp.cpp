@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#define INF (1ll << 32)
 using namespace std;
 
 struct edge{
