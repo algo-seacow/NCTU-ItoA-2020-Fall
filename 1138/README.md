@@ -9,4 +9,4 @@
 
 答案為全部的 profit 總和 減掉 maximum flow。  
 
-- [309552025_edmonds_karp.cpp](309552025_edmonds_karp.cpp)
+- [309552025_edmonds_karp.cpp](submissions/accepted/309552025_edmonds_karp.cpp)
